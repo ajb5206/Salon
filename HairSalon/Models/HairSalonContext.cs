@@ -1,8 +1,8 @@
-Using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace HairSalon.Models
 {
-	public class HairSalonContext : AddDbContext
+	public class HairSalonContext : DbContext
 	{
 		public DbSet<Stylist> Stylists { get; set; }
 
