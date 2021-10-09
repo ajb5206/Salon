@@ -49,7 +49,7 @@ namespace HairSalon.Controllers
 		[HttpPost]
 		public ActionResult Edit(Stylist stylist)
 		{
-			_db.entry(stylist).State = EntityState.Modified;
+			_db.Entry(stylist).State = EntityState.Modified;
 			_db.SaveChanges();
 			return RedirectToAction("Index");
 		}
