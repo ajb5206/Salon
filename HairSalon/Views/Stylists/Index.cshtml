@@ -1,0 +1,14 @@
+@{
+	Layout = "_Layout";
+}
+
+@using HairSalon.Models;
+@model List<HairSalon.Models.Stylist>;
+
+<h1>Stylists</h1>
+	@foreach(Stylist stylist in Model)
+	{
+		<li>@Html.ActionLink($"{stylist.StylistName}: {stylist.Style}, {stylist.Description}", "Details", new { id =stylist.StylistId })</li>
+	}
+
+	<p>@Html.ActionLink("Add a new stylist", "Create")</p>
